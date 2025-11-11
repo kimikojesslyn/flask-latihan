@@ -1,0 +1,34 @@
+{% extends "main.html" %}{% block content %}
+<form action="/pmb" method="post">
+  <div class="mb-3">
+    <label for="name" class="form-label">Name</label>
+    <input type="text" class="form-control" id="name" name="name" />
+  </div>
+  <div class="mb-3">
+    <label for="email" class="form-label">Email</label>
+    <input type="email" class="form-control" id="email" name="email" />
+  </div>
+  <div class="mb-3">
+    <label for="tempatlahir" class="form-label">Tempat Lahir</label>
+    <input type="text" class="form-control" id="tempatlahir" name="tempatlahir" />
+  </div>
+  <div class="mb-3">
+    <label for="tanggallahir" class="form-label">Tanggal Lahir</label>
+    <input type="date" class="form-control" id="tanggallahir" name="tanggallahir" />
+  </div>
+  <div class="mb-3">
+    <label for="asalsma" class="form-label">Asal SMA</label>
+    <input type="text" class="form-control" id="asalsma" name="asalsma" />
+  </div>
+  <div class="mb-3">
+    <label for="nomor" class="form-label">No. HP</label>
+    <input type="text" class="form-control" id="nomor" name="nomor" />
+  </div>
+  <div class="mb-3">
+    <label for="uploadfoto" class="form-label">Upload Foto</label>
+    <input type="file" class="form-control" id="uploadfoto" name="uploadfoto" />
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+
+{% endblock %}
