@@ -1,32 +1,32 @@
 {% extends "main.html" %}{% block content %}
-<form action="/pmb" method="post">
+<form action="/pmb" method="post" enctype="multipart/form-data">
   <div class="mb-3">
-    <label for="name" class="form-label">Name</label>
-    <input type="text" class="form-control" id="name" name="name" />
+    <label for="nama" class="form-label">Nama</label>
+    <input type="text" class="form-control" id="nama" name="nama" />
   </div>
   <div class="mb-3">
     <label for="email" class="form-label">Email</label>
     <input type="email" class="form-control" id="email" name="email" />
   </div>
   <div class="mb-3">
-    <label for="tempatlahir" class="form-label">Tempat Lahir</label>
-    <input type="text" class="form-control" id="tempatlahir" name="tempatlahir" />
+    <label for="tempat_lahir" class="form-label">Tempat Lahir</label>
+    <input type="text" class="form-control" id="tempat_lahir" name="tempat_lahir" />
   </div>
   <div class="mb-3">
-    <label for="tanggallahir" class="form-label">Tanggal Lahir</label>
-    <input type="date" class="form-control" id="tanggallahir" name="tanggallahir" />
+    <label for="tanggal_lahir" class="form-label">Tanggal Lahir</label>
+    <input type="date" class="form-control" id="tanggal_lahir" name="tanggal_lahir" />
   </div>
   <div class="mb-3">
-    <label for="asalsma" class="form-label">Asal SMA</label>
-    <input type="text" class="form-control" id="asalsma" name="asalsma" />
+    <label for="asal_sma" class="form-label">Asal SMA</label>
+    <input type="text" class="form-control" id="asal_sma" name="asal_sma" />
   </div>
   <div class="mb-3">
     <label for="nomor" class="form-label">No. HP</label>
     <input type="text" class="form-control" id="nomor" name="nomor" />
   </div>
   <div class="mb-3">
-    <label for="uploadfoto" class="form-label">Upload Foto</label>
-    <input type="file" class="form-control" id="uploadfoto" name="uploadfoto" />
+    <label for="foto" class="form-label">Upload Foto</label>
+    <input type="file" class="form-control" id="foto" name="foto" />
   </div>
   <button type="submit" class="btn btn-primary">Submit</button>
 </form>

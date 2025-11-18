@@ -23,12 +23,30 @@ def contact():
         #tampilkan pada terminal
         print(f'Nama: {nama}, Email: {email}, Pesan: {pesan}')
 
-    title = "Contact Page"
+    title = 'Contact Page'
     return render_template('contact.html', title=title)
 
-@app.route('/pmb')
+@app.route('/pmb', methods=['GET', 'POST'])
 def pmb():
-    return render_template('pmb.html')
+    if request.method == 'POST':
+        # Proses data form di sini
+        nama = request.form['nama']
+        email = request.form['email']
+        tempatlahir = request.form['tempat_lahir']
+        tanggallahir = request.form['tanggal_lahir']
+        asal_sma = request.form['asal_sma']
+        no_hp = request.form['nomor']
+        foto = request.files['foto']
+
+        # Upload foto ke folder 'uploads'
+        foto.save(f'static/uploads/{foto.filename}')
+
+        # Tampilkan di terminal
+        print(f'Nama: {nama}, Email: {email}, Tempat Lahir: {tempatlahir}, Tanggal Lahir: {tanggallahir}, Asal SMA: {asal_sma}, No HP: {no_hp}, Foto: {foto.filename}')
+
+    title = 'Penerimaan Mahasiswa Baru'
+    return render_template('pmb.html', title=title)
+
 #run the app
 if __name__== '__main__':
     app.run(debug=True)
